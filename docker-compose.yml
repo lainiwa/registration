@@ -1,0 +1,37 @@
+version: '3.3'
+services:
+
+  # db:
+  #   image: postgres
+  #   restart: always
+  #   ports:
+  #     - 5432:5432
+  #   environment:
+  #     POSTGRES_USER: 'registration'
+  #     POSTGRES_PASSWORD: 'pass'
+  #   command: postgres -c 'track_commit_timestamp=on'
+
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
+
+  # flask:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   restart: on-failure
+  #   ports:
+  #     - "9998:9998"
+  #   depends_on:
+  #     - db
+
+  ubuntu:
+    image: ubuntu
+    stdin_open: true
+    tty: true
+    network_mode: bridge
+    extra_hosts:
+      - "printer:192.168.1.77"
+    command: sh -c "apt update && apt install netcat -y && echo kek | nc printer 9999 ; sleep infinity"

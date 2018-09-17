@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        p {
+            font-size: 8pt;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+    <br>
+    <p align="center">
+        <img src="yule.jpg" style="float:left" width="70"> ПЛАНЕТА ИННОВАЦИЙ
+        <br> Мой шаг в робототехнику
+        <br> 17 февраля 2018 г.
+    </p>
+    <hr>
+    <p> Команда: {{ team.name }} </p>
+    <p> ФИО: {{ person.last_name }} {{ person.first_name }} </p>
+    <p> Школа: {{ person.school }} </p>
+    <p> 4 этаж </p>
+    <p> Рост ребенка: {{ person.json.height }} </p>
+    <p> ID команды: </p>
+    <p align="center" style="font-size: 20pt;">
+        {{ team.tid }}
+        <hr>
+    </p>
+    <!-- <p> hh:mm dd.MM.yyyy </p> -->
+</body>
+
+</html>

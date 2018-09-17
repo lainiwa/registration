@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Регистрация</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="../node_modules/material-design-lite/material.min.css">
+    <script src="../node_modules/material-design-lite/material.min.js"></script>
+    <!-- <link rel="stylesheet" href="../node_modules/material-design-icons/iconfont/material-icons.css"> -->
+
+    <!-- <script src="../node_modules/alertifyjs/build/alertify.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="../node_modules/alertifyjs/build/css/alertify.min.css">
+    <link rel="stylesheet" href="../node_modules/alertifyjs/build/css/themes/default.min.css"> -->
+
+    <!-- Moment.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/locale/ru.js"></script> -->
+
+    <!-- <script src="../node_modules/plotly.js/dist/plotly.min.js"></script> -->
+    <!-- <script src="http://cdn.date-fns.org/v1.0.0/date_fns.min.js"></script> -->
+
+    <style type="text/css">
+      .green-row{
+        background: #c0f7b9;
+      }
+      .yellow-row{
+        background: #fbfcbd;
+      }
+      .red-row{
+        background: #fc9999;
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="dash-tabs.css">
+</head>
+
+<body>
+        <div id="dash">
+
+            <tabs>
+
+                <tab id="graph" name="График заполненности">
+                    <div id="myDiv">
+                    </div>
+                </tab>
+
+                <tab id="members" name="Таблица участников">
+                    <div id="table-members">
+                        <vue-good-table
+                          :columns="columnsParticipants"
+                          :rows="allPairs"
+                          :lineNumbers="true"
+                          :row-style-class="perticipantsRowClass"
+                          :search-options="{
+                              enabled: true,
+                              placeholder: 'Поиск по таблице',
+                            }">
+                        </vue-good-table>
+                    </div>
+                </tab>
+
+                <tab id="teams" name="Таблица команд">
+                    <div id="table-teams">
+                        <vue-good-table
+                          :columns="columnsTeams"
+                          :rows="db.teams ? teamsWithParticipants : []"
+                          :lineNumbers="true"
+                          :row-style-class="teamsRowClass"
+                          :search-options="{
+                              enabled: true,
+                              placeholder: 'Поиск по таблице',
+                            }">
+                        </vue-good-table>
+                    </div>
+                </tab>
+
+                <tab id="downoad" name="Скачать отчет">
+                    <button class="cmd-next mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                            v-if="db.teams"
+                            v-on:click="downloadXLSX()">Скачать таблицы</button>
+                </tab>
+
+            </tabs>
+
+        </div>
+
+    <script src="dash.js"></script>
+
+
+</html>

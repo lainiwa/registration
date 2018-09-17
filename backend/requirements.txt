@@ -1,0 +1,13 @@
+funcy
+psycopg2-binary
+sqlalchemy
+sqlalchemy-repr
+sqlalchemy-utils
+flask
+flask_restful
+flask_cors
+flask_httpauth
+marshmallow-sqlalchemy
+gunicorn
+Sphinx
+sphinx_rtd_theme

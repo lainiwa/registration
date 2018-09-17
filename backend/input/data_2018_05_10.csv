@@ -1,0 +1,39 @@
+team_id,user_id,team,email,password,last,first,school
+1,2,Легион,bakulin.vla@gmail.com,glUHeGol,Бакулин,Владислав,ГБОУ Школа №587
+1,3,Легион,kostya.rebrov03@mail.ru,yItaplIk,Ребров,Константин,ГБОУ Школа №587
+1,4,Легион,antosha_sokolov_04@mail.ru,hozaHuSs,Соколов,Антон,ГБОУ Школа №587
+2,6,Кирсановцы,gorn.lenya@inbox.ru,geNtesLiB,Горн,Леонид,ГБОУ Школа №1034
+2,7,Кирсановцы,pavel.shoplik@yandex.ru,toYuPliF,Шоплик,Павел,ГБОУ Школа №1034
+2,8,Кирсановцы,botalovnikita@yandex.ru,PepaGiv,Боталов,Никита,ГБОУ Школа №1034
+7,22,RoboStar,alexsokolov2004@yandex.ru,TupuGlaK,Соколов,Александр,ГБОУ Школа № 1498
+7,23,RoboStar,costia.bo4arov@yandex.ru,NiptuBrEct,Бочаров,Константин,ГБОУ Школа № 1498
+7,24,RoboStar,mlgtm@mail.ru,viZubresS,Алексеев,Адриан,ГБОУ Школа № 1498
+8,26,Инженеры,lisinami@mail.ru,WiloSninK,Лисин,Михаил,"ГАОУ ЦО №548 ""Царицыно"""
+8,27,Инженеры,irasharm@rambler.ru,DuskostrisP,Гаджиев,Тимур,"ГАОУ ЦО №548 ""Царицыно"""
+8,28,Инженеры,svetlannabas@mail.ru,trooftABroor,Басов,Владимир,"ГАОУ ЦО №548 ""Царицыно"""
+9,30,JARVIS,grey4led@mail.ru,hintapRECt,Черкасский,Сергей,ГБОУ Школа 1101
+9,31,JARVIS,kadrov-alexander@yandex.ru,dAgasAV,Кадров,Александр,ГБОУ Школа 1101
+11,36,Совушки,yurkova.borovik@yandex.ru,nitAsmIW,Юркова,Дарья,"ГБПОУ ""1й МОК"""
+11,37,Совушки,kudryakov.raschit@yandex.ru,sHOgUskon,Кудряков,Рашит,"ГБПОУ ""1й МОК"""
+11,38,Совушки,jenia.vlas2016@yandex.ru,lonDoPraCt,Заринов,Дмитрий,"ГБПОУ ""1й МОК"""
+14,48,Mindstorms,vlad.sup.1910@mail.ru,TIBacroz,Пащинский,Владислав,ГБОУ Школа № 17 ОШ № 2
+14,49,Mindstorms,faermancool@mail.ru,breWubreSk,Наконечный,Александр,ГБОУ Школа № 17 ОШ № 2
+14,50,Mindstorms,ilia.andre2017@yandex.ru,sLacHefrenT,Андреев,Илья,ГБОУ Школа № 17 ОШ № 2
+20,68,ТБВ,mish-len@yandex.ru,VUhOtact,Тихонов,Артем,ГБОУ Школа №1353
+20,69,ТБВ,misha.lynnik@gmail.com,shiWUskor,Лынник,Михаил,ГБОУ Школа №1353
+20,70,ТБВ,vdovin.ivan2002@gmail.com,tugaPLOch,Вдовин,Иван,ГБОУ Школа №1353
+21,71,Шпунтик,andrey-novikov-2002@mail.ru,procHeSmAv,Новиков,Андрей,"МБОУ СОШ № 20 г.о. Коломна, Московской обл."
+21,72,Шпунтик,vika.drevo.02@mail.ru,PRishAcresk,Древо,Виктория,"МБОУ СОШ № 20 г.о. Коломна, Московской обл."
+25,84,Фиксики,pds_1311@mail.ru,BendoshET,Полякова,Дарья,ГБОУ Школа №1353
+25,85,Фиксики,mr.klu2003@mail.ru,zAsseLIr,Клюканов,Егор,ГБОУ Школа №1353
+25,86,Фиксики,kapka19@yandex.ru,GloonguPrush,Лисицкая,Елизавета,ГБОУ Школа №1353
+26,88,Ветроград,polenka.mosina2013@yandex.ru,kelabroOY,Мосина,Полина,МОУ СОШ №9 г. Буй Костромская область
+26,89,Ветроград,schpagin.dania2014@yandex.ru,fRAshaSnest,Шпагин,Даниил,МОУ СОШ №9 г. Буй Костромская область
+26,90,Ветроград,kkorobenuyk@mail.ru,brisHuYir,Коробенюк,Кирилл,МОУ СОШ №9 г. Буй Костромская область
+,,Р-6,,,Переверзев,Федор,ГБОУ Школа №1537
+,,Р-6,,,Евсеев,Вадим,ГБОУ Школа №1537
+,,Р-6,,,Попов,Леонид,ГБОУ Школа №1537
+,,Р-7,,,Давшиц,Семен,ГБОУ Школа №1537
+,,Р-7,,,Сафонов,Иван,ГБОУ Школа №1537
+,,Р-7,,,Белоусов,Алексей,ГБОУ Школа №1537
+,,Р-7,,,Болеков,Лолек,ГБОУ Школа №1537

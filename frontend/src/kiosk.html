@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Kiosk</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="../node_modules/material-design-lite/material.min.css">
+    <script src="../node_modules/material-design-lite/material.min.js"></script>
+    <!-- <link rel="stylesheet" href="../node_modules/material-design-icons/iconfont/material-icons.css"> -->
+
+    <!-- <script src="../node_modules/alertifyjs/build/alertify.min.js"></script> -->
+    <link rel="stylesheet" href="../node_modules/alertifyjs/build/css/alertify.min.css">
+    <link rel="stylesheet" href="../node_modules/alertifyjs/build/css/themes/default.min.css">
+
+    <link rel="stylesheet" type="text/css" href="index.less">
+</head>
+
+<body>
+    <div class="wrapper" id="app">
+
+        <!-- Экран ввода фамилии участника -->
+        <template v-if="mode === 'typing'">
+            <!-- Строка с вводимой фамилией участника -->
+            <input class="cmd-name mdl-textfield__input" type="text" id="sample6" readonly disabled="true"
+                   v-bind:placeholder="name=='' ? 'ФАМИЛИЯ УЧАСТНИКА' : name">
+            <!-- Элементы управления -->
+            <button class="cmd-next mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                    v-on:click="mode = 'choosing'"
+                    v-bind:disabled="!isNextEnabled">Далее</button>
+            <button class="cmd-clear mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                    v-on:click="name = ''">C</button>
+            <button class="cmd-delete mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                    v-on:click="name = pred_names.length ? pred_names.pop() : ''">Del</button>
+            <!-- Буквы -->
+            <button class="letter mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                    v-for="char in letters"
+                    v-on:click="pred_names.push(name); name += char"
+                    v-bind:disabled="!mightBeNext(char)">
+                {{ char }}
+            </button>
+        </template>
+
+        <!-- Экран выбора участника (появляется всегда, но необходим для тех случаев, когда есть однофамильцы) -->
+        <template v-else-if="mode === 'choosing'">
+            <!-- Кнопки для каждого из найденных участников -->
+            <button class="accept mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                    v-for="person in allNamesakes"
+                    v-on:click="registerPerson(person)">
+                    {{ formShortDescription(person) }}
+            </button>
+            <!-- Кнопка отмены (если вдруг набрали чужую фамилию). -->
+            <button class="deny mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                    v-on:click="name = ''; mode = 'typing'">
+                Назад
+            </button>
+        </template>
+
+    </div>
+    <script src="kiosk.js"></script>
+</body>
+
+</html>

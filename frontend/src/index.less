@@ -1,0 +1,84 @@
+* {
+    padding: 0px;
+    margin:  0px;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Видимые div'ы для отладки. */
+/*div {
+    border: 5px double black;
+    padding: 0px;
+    margin:  0px;
+}
+*/
+.wrapper {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  height: 100%;
+  grid-gap: 10px;
+  /*margin: 10px 10px 10px 10px;*/
+}
+
+/*.letter {
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1 1 200px;
+}*/
+
+/* https://medium.freecodecamp.org/learn-css-grid-in-5-minutes-f582e87b1228 */
+.cmd-name {
+    grid-column: 1 / 6;
+}
+
+.cmd-next {
+    grid-column: 5;
+    grid-row: 2 / 6;
+}
+
+.cmd-delete {
+    grid-column: 5;
+    grid-row: 6 / 8;
+}
+
+.cmd-clear {
+    grid-column: 5;
+    grid-row: 8 / 10;
+}
+
+.mdl-button {
+    font-size: 300%;
+    width: 100%;
+    height: 100%;
+}
+
+.mdl-textfield__input {
+    font-size: 450%;
+    text-align: center;
+    height: 100%;
+}
+
+.accept {
+    grid-column: 1 / -1;
+}
+
+.deny {
+    grid-column: 1 / -1;
+}
+
+.wrapper > div {
+    padding: 4px;
+    margin: 0px;
+}
+
+/*.alertify-notifier {
+  max-width: 700px;
+}*/
+
+.alertify-notifier .ajs-message.ajs-error{
+    color: #000;
+    font-size: x-large;
+}
